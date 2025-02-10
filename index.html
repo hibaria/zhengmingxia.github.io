@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mingxia Zheng (郑明霞)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="profile-info">
+                <h1>Mingxia Zheng <span class="chinese-name">(郑明霞)</span></h1>
+                <p class="subtitle"><b>🧑‍🎨 interaction Design</b></p>
+                <p><span class="icon">📞</span> Tel: (+86) 13115063236</p>
+                <p><span class="icon">📧</span> Email: <a href="mailto:1002626509@qq.com">1793706453@qq.com</a> &amp; <a href="mailto:lyq@shu.edu.cn">lyq@shu.edu.cn</a></p>
+                <p><span class="icon">💬</span> WeChat: zmx1002626509</p>
+                <div class="links">
+                    <a href="files/resume.pdf" target="_blank" class="button">📄 PDF Resume</a>
+                </div>
+            </div>
+            <div class="carousel-container">
+                <img src="images/photo1.jpeg" class="carousel-image active" alt="Photo 1">
+                <img src="images/photo1.jpeg" class="carousel-image" alt="Photo 2">
+                <img src="images/photo1.jpeg" class="carousel-image" alt="Photo 3">
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        let currentSlide = 0;
+
+        function changeSlide(direction) {
+            const slides = document.querySelectorAll('.carousel-image');
+            slides[currentSlide].classList.remove('active');
+
+            currentSlide += direction;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+
+            slides[currentSlide].classList.add('active');
+        }
+    </script>
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mingxia Zheng. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="track-visitors.js"></script>
+</body>
+</html>
