@@ -1,0 +1,1 @@
+Hi, I'm Mingxia Zheng (郑明霞), and this is the repo of my personal website, which also serves as my resume. I'm glad you found my website, and welcome!
